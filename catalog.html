@@ -6,38 +6,45 @@
     </head>
     <body>
         
-        <header class="main-header">
-            <nav class="main-navigator">
+        <header class="main-header">           
 
-                <a class="main-header-logo">
-                    <img src="http://placehold.it/150x100" width="" height="" alt="Логотип девайса «DEVICE»">
-                </a>
-                <div class="header-top">
-                    <ul class="left-navigation">
-                        <li class="search-site-link">Поиск по сайту</li>
-                    </ul>
-
-                    <ul class="center-navigation">
-                        <li class="login-link">Войти</li>
-                    </ul>
-
-                    <ul class="right-navigation">
-                        <li class="compare-link">Сравнить</li>
-                        <li class="basket-link">Корзина</li>
-                    </ul>
+            <a class="main-header-logo">
+                <img src="http://placehold.it/150x100" width="" height="" alt="Логотип девайса «DEVICE»">
+            </a>
+            <div class="header-top">
+                <div class="main-header-search">
+                    <a href="#">Поиск по сайту</a>
                 </div>
+
+                <ul class="user-navigation">
+                    <li class="buttons-header-search login-link"><a href="#">Войти</a></li>
+                    <li class="buttons-header-search compare-link"><a href="#">Сравнить</a></li>
+                    <li class="buttons-header-search basket-link"><a href="#">Корзина</a></li>
+                </ul>
+            </div>
+            <nav class="main-navigator">
                 <div class="header-bottom">
                     <ul class="left-navigation">
-                        <li class="catalog-link">Каталог товаров</li>
+                        <li class="catalog-link"><a href="#">Каталог товаров</a></li>
+                    </ul>
+                                
+                    <ul class="catalog-link-left">
+                        <li><a href="#">Виртуальная реальность</a></li>
+                        <li><a href="#">Моноподы для селфи</a></li>
+                        <li><a href="#">Экшн-камеры</a></li>
+                    </ul>
+                    <ul class="catalog-link-center">
+                        <li><a href="#">Фитнес-браслеты</a></li>
+                        <li><a href="#">Умные часы</a></li>
+                    </ul>
+                    <ul class="catalog-link-right">
+                        <li><a href="#">Квадрокоптеры</a></li>
                     </ul>
 
                     <ul class="center-navigation">
-                        <li class="delivery-link">Доставка</li>
-                        <li class="guarantee-link">Гарантия</li>
-                    </ul>
-
-                    <ul class="right-navigation">                    
-                        <li class="contacts-link">Контакты</li>
+                        <li class="center-navigation-item delivery-link"><a href="#">Доставка</a></li>
+                        <li class="center-navigation-item guarantee-link"><a href="#">Гарантия</a></li>
+                        <li class="center-navigation-item contacts-link"><a href="#">Контакты</a></li>
                     </ul>
                 </div>
             </nav>
@@ -45,116 +52,137 @@
         
         <main class="container"> 
             <h1>Моноподы для селфи</h1>
-                <ul class="breadcrumbs">
-                <li><a href="index.html">Главная</a> ></li>
-                <li><a href="catalog.html">Каталог товаров</a> ></li>
-                <li class="breadcrumbs-current">Моноподы для селфи</li>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs-catalog"><a href="index.html">Главная</a> ></li>
+                <li class="breadcrumbs-catalog"><a href="catalog.html">Каталог товаров</a> ></li>
+                <li class="breadcrumbs-catalog breadcrumbs-current">Моноподы для селфи</li>
             </ul>   
             <section class="filters">
                 <h2>Фильтр:</h2>
                 <h3 class="visually-hidden">Фильтр товаров</h3>
                 <!-- Здесь будет форма -->
             </section>
-            <section class="sorting-top">
+            <section class="sorting">
                 <h2>Сортировка:</h2>
-                <ul>
-                    <li class="sorting-top">По цене</li>
-                    <li><a href="#">По типу</a></li>
-                    <li><a href="#">По популярности</a></li>
-                </ul>                
+                <ul class="sorting-list">
+                    <li class="sorting-item sorting-item-current">По цене</li>
+                    <li class="sorting-item"><a href="#">По типу</a></li>
+                    <li class="sorting-item"><a href="#">По популярности</a></li>
+                </ul>
+                <div class="arrow">
+                    <a href="#"><img src="img/icon-up-dir.png" alt="Сортировка вверх" class="arrow-up"></a>
+                    <a href="#"><img src="img/icon-down-dir.png" alt="Сортировка вниз" class="arrow-down"></a>
+                </div>                
             </section>
             <section class="catalog">
-                <h3 class="visually-hidden">Список моноподов для селфи</h3>
+                <h2 class="visually-hidden">Список моноподов для селфи</h2>
                 <ul class="catalog-list">
                     <li class="catalog-item">   
-                        <a href="catalog-item.html">
-                            <img src="img/product-1.jpg" width="220" height="165" alt="Любительская селфи-палка">
+                        <a href="#">
+                            <div class="container-catalog">
+                                <img src="img/product-1.jpg" width="220" height="165" alt="Любительская селфи-палка">
+                                <div class="container-catalog-buttons">
+                                    <a class="button container-catalog-button-1" href="#">В корзину</a>
+                                    <a class="button container-catalog-button-2" href="#">Добавить к сравнению</a>
+                                </div>
+                            </div>
+                        </a>                        
+                        <a class="catalog-category" href="#">
+                            Любительская селфи-палка
+                        </a>                        
+                        <span class="catalog-item-price">
+                            500 руб.
+                        </span>
+                    </li>
+                    <li class="catalog-item">                       
+                        <a href="#">
+                            <div class="container-catalog">
+                                <img src="img/product-2.jpg" width="220" height="165" alt="Профессиональная селфи-палка">
+                                <div class="container-catalog-buttons">
+                                    <a class="button container-catalog-button-1" href="#">В корзину</a>
+                                    <a class="button container-catalog-button-2" href="#">Добавить к сравнению</a>
+                                </div>
+                            </div>
+                            
+                        </a>                         
+                        <a class="catalog-category" href="#">
+                            Профессиональная селфи-палка
+                        </a> 
+                        <span class="catalog-item-price">
+                            1 500 руб.
+                        </span>
+                    </li>
+                    <li class="catalog-item">                       
+                        <a href="#">
+                            <div class="container-catalog">
+                                <img src="img/product-3.jpg" width="220" height="165" alt="Непотопляемая селфи-палка">
+                                <div class="container-catalog-buttons">
+                                    <a class="button container-catalog-button-1" href="#">В корзину</a>
+                                    <a class="button container-catalog-button-2" href="#">Добавить к сравнению</a>
+                                </div>
+                            </div>                            
+                        </a>                         
+                        <a class="catalog-category" href="#">
+                            Непотопляемая селфи-палка
                         </a>
-                        <h4>
-                            <a href="#">
-                                <span class="catalog-category">Любительская селфи-палка</span>                                
-                            </a>
-                        </h4>
-                        <p class="catalog-item-price">
-                            <b>500 руб.</b>
-                        </p>
+                        <span class="catalog-item-price">
+                            2 500 руб.
+                        </span>
                     </li>
                     <li class="catalog-item">                       
-                        <a href="catalog-item.html">
-                            <img src="img/product-2.jpg" width="220" height="165" alt="Профессиональная селфи-палка">
-                        </a> 
-                        <h3>
-                            <a href="catalog-item.html">
-                                <span class="catalog-category">Профессиональная селфи-палка</span>
-                            </a>
-                        </h3>                        
-                        <p class="catalog-item-price">
-                            <b>1 500 руб.</b>
-                        </p>
-                    </li>
-                    <li class="catalog-item">                       
-                        <a href="catalog-item.html">
-                            <img src="img/product-3.jpg" width="220" height="165" alt="Непотопляемая селфи-палка">
-                        </a> 
-                        <h3>
-                            <a href="catalog-item.html">
-                                <span class="catalog-category">Непотопляемая селфи-палка</span>
-                            </a>
-                        </h3>                        
-                        <p class="catalog-item-price">
-                            <b>2 500 руб.</b>
-                        </p>
-                    </li>
-                    <li class="catalog-item">                       
-                        <a href="catalog-item.html">
-                            <img src="img/product-4.jpg" width="220" height="165" alt="Селфи-палка «Следуй за мной»">
-                        </a> 
-                        <h3>
-                            <a href="catalog-item.html">
-                                <span class="catalog-category">Селфи-палка «Следуй за мной»</span>
-                            </a>
-                        </h3>                        
-                        <p class="catalog-item-price">
-                            <b>4 900 руб.</b>
-                        </p>
+                        <a href="#">
+                            <div class="container-catalog">
+                                <img src="img/product-4.jpg" width="220" height="165" alt="Селфи-палка «Следуй за мной»">
+                                <div class="container-catalog-buttons">
+                                    <a class="button container-catalog-button-1" href="#">В корзину</a>
+                                    <a class="button container-catalog-button-2" href="#">Добавить к сравнению</a>
+                                </div>
+                            </div>                            
+                        </a>                         
+                        <a class="catalog-category" href="#">
+                            Селфи-палка «Следуй за мной»
+                        </a>
+                        <span class="catalog-item-price">
+                            4 900 руб.
+                        </span>
                     </li>                    
                 </ul>
-                <span class="button gallery-button gallery-button-back">Назад</span>
-                <ul class="pagination-list">
-                    <li class="pagination-item pagination-item-current"><a>1</a></li>
-                    <li class="pagination-item"><a href="#">2</a></li>
-                    <li class="pagination-item"><a href="#">3</a></li>
-                </ul>
-                <span class="button gallery-button gallery-button-next">Вперед</span>
+                <div class="pagination">
+                    <span class="button gallery-button gallery-button-back">Назад</span>
+                    <ul class="pagination-list">
+                        <li class="pagination-item pagination-item-current"><a>1</a></li>
+                        <li class="pagination-item"><a href="#">2</a></li>
+                        <li class="pagination-item"><a href="#">3</a></li>
+                    </ul>
+                    <span class="button gallery-button gallery-button-next">Вперед</span>
+                </div>                
             </section>
         </main>
-        <footer class="main-footer">
-            <a class="main-footer-logo">
-                <img src="http://placehold.it/150x100" width="" height="" alt="Логотип девайса «DEVICE»">
-            </a>
+        <footer class="main-footer">            
             <div class="footer-top">  
-                <ul class="right-navigation">
-                    <li class="login-link">Войти</li>
-                    <li class="compare-link">Сравнить</li>
-                    <li class="basket-link">Корзина</li>
+                <a class="main-footer-logo">
+                    <img src="http://placehold.it/150x100" width="" height="" alt="Логотип девайса «DEVICE»">
+                </a>
+                <ul class="user-menu">
+                    <li class="user-menu-link login-link"><a href="#">Войти</a></li>
+                    <li class="user-menu-link compare-link"><a href="#">Сравнить</a></li>
+                    <li class="user-menu-link basket-link"><a href="#">Корзина</a></li>
                 </ul>
             </div>
             <div class="footer-center"> 
-                <p class="address">г. Москва, ул. Строителей, 15</p>
-                <ul class="footer-center-navigation">
-                    <li class="delivery-footer-link">Доставка</li>
-                    <li class="guarantee-footer-link">Гарантия</li>
-                    <li class="contacts-footer-link">Контакты</li>
+                <p class="footer-address">г. Москва, ул. Строителей, 15</p>
+                <ul class="footer-menu-list">
+                    <li class="menu-list-link">Доставка</li>
+                    <li class="menu-list-link">Гарантия</li>
+                    <li class="menu-list-link">Контакты</li>
                 </ul>
-                <p class="phone">Тел.: +7 (495) 495-95-95</p>
+                <p class="footer-phone"><a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></p>
             </div>
-            <div class="footer-bottom">                 
-                <ul class="footer-bottom-navigation">
-                    <li><a class="facebook-icon" href="#">Facebook</a></li>
-                    <li><a class="instagram-icon" href="#">instagram</a></li>
-                    <li><a class="twitter-icon" href="#">Twitter</a></li>
-                </ul>
-                <img src="http://placehold.it/150x100" width="" height="" alt="Иконка академии">
+            <div class="social">
+                <a class="social-icon facebook-icon" href="#">Facebook</a>
+                <a class="social-icon instagram-icon" href="#">instagram</a>
+                <a class="social-icon twitter-icon" href="#">Twitter</a>
+                <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="http://placehold.it/150x100" width="" height="" alt="Иконка академии"></a>
             </div>
         </footer>
 
