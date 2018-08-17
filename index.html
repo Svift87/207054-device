@@ -7,16 +7,22 @@
     <body>    
         <header class="main-header">           
 
-            <a class="main-header-logo">Device</a>
+            <a class="main-header-logo" href="index.html">Device</a>
             <div class="header-top">
                 <div class="main-header-search">
-                    <a href="#">Поиск по сайту</a>
+                    <input type="search" name="main header search" placeholder="Поиск по сайту">    
                 </div>
 
-                <ul class="user-navigation">
-                    <li class="user-navigation-item user-navigation-login"><a href="#">Войти</a></li>
-                    <li class="user-navigation-item user-navigation-compare"><a href="#">Сравнить</a></li>
-                    <li class="user-navigation-item user-navigation-basket"><a href="#">Корзина</a></li>
+                <ul class="user-navigation-list">
+                    <li class="user-navigation-item user-navigation-login">
+                        <a class="user-navigation-login" href="login.html">Войти</a>
+                    </li>
+                    <li class="user-navigation-item user-navigation-compare">
+                        <a class="user-navigation-compare" href="compare.html">Сравнить</a>
+                    </li>
+                    <li class="user-navigation-item user-navigation-basket">
+                        <a class="user-navigation-basket" href="basket.html">Корзина</a>
+                    </li>
                 </ul>
             </div>
             <nav class="main-navigation">                
@@ -41,9 +47,15 @@
                 </ul>
 
                 <ul class="main-menu-list">
-                    <li class="main-menu-item delivery-link"><a href="#">Доставка</a></li>
-                    <li class="main-menu-item guarantee-link"><a href="#">Гарантия</a></li>
-                    <li class="main-menu-item contacts-link"><a href="#">Контакты</a></li>
+                    <li class="main-menu-item delivery-link">
+                        <a class="delivery-link" href="delivery.html">Доставка</a>
+                    </li>
+                    <li class="main-menu-item guarantee-link">
+                        <a class="guarantee-link" href="guarantee.html">Гарантия</a>
+                    </li>
+                    <li class="main-menu-item contacts-link">
+                        <a class="contacts-link" href="contacts.html">Контакты</a>
+                    </li>
                 </ul>                
             </nav>
         </header>
@@ -53,9 +65,15 @@
             
             <div class="slide-controls">
                 <ul class="slide-controls-list">
-                    <li class="dot"></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                    <li class="slide-controls-item">
+                        <input class="slide-controls-radio" type="radio" name="product-slide" checked>
+                    </li>
+                    <li class="slide-controls-item">
+                        <input class="slide-controls-radio" type="radio" name="product-slide">
+                    </li>
+                    <li class="slide-controls-item">
+                        <input class="slide-controls-radio" type="radio" name="product-slide">
+                    </li>
                 </ul>
             </div>
                    
@@ -67,7 +85,7 @@
                     <p class="number">01</p>
                     <h3>Делай селфи, как Бен Стиллер!</h3>
                     <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-                    <a class="button slide-button" href="#">Подробнее</a>
+                    <a class="button slide-button" href="catalog.html">Подробнее</a>
                     
                     <table class="feature">
                         <tr class="feature-top-list">
@@ -89,7 +107,7 @@
                     <h3>Худеем правильно!</h3>
                     <p>Мотивирующие фитнес-браслеты помогут найти в себе силы 
                     не пропускать занятия и соблюдать диету.</p>
-                    <a class="button slide-button" href="#">Подробнее</a>
+                    <a class="button slide-button" href="catalog.html">Подробнее</a>
                     
                     <table class="feature">
                         <tr class="feature-top-list">
@@ -106,7 +124,7 @@
                     <p class="number">03</p>
                     <h3>Порхает как бабочка, жалит как пчела!</h3>
                     <p>Этот обычный, на первый взгляд, квадрокоптер оснащен  мощным лазером, замаскированным под стандартную камеру.</p>
-                    <a class="button slide-button" href="#">Подробнее</a>
+                    <a class="button slide-button" href="catalog.html">Подробнее</a>
 
                     <table class="feature">
                         <tr class="feature-top-list">
@@ -127,48 +145,47 @@
                     <li class="feature-item">
                         <a href="catalog.html" class="directory-img">
                             <img src="http://placehold.it/150x100" width="" height=""> 
-                        <span>Виртуальная реальность</span>  
+                            <span>Виртуальная реальность</span>  
                         </a>                  
                     </li>
                     <li class="feature-item">
                         <a href="catalog.html" class="directory-img">
                             <img src="http://placehold.it/150x100" width="" height="">
-                        <span>Моноподы для селфи</span> 
+                            <span>Моноподы для селфи</span> 
                         </a>                   
                     </li>
                     <li href="catalog.html" class="feature-item">
                         <a href="catalog.html" class="directory-img">
                             <img src="http://placehold.it/150x100" width="" height="">
-                        <span>Экшн-камеры</span>                        
+                            <span>Экшн-камеры</span>                        
                         </a>
                     </li>
                     <li class="feature-item">
                         <a href="catalog.html" class="directory-img">
                             <img src="http://placehold.it/150x100" width="" height="">
-                        <span>Фитнес-браслеты</span>                        
+                            <span>Фитнес-браслеты</span>                        
                         </a>
                     </li>
                     <li class="feature-item">
                         <a href="catalog.html" class="directory-img">
                             <img src="http://placehold.it/150x100" width="" height="">
-                        <span>Умные часы</span>                        
+                            <span>Умные часы</span>                        
                         </a>
                     </li>
                     <li class="feature-item">
                         <a href="catalog.html" class="directory-img">
                             <img src="http://placehold.it/150x100" width="" height="">
-                        <span>Квадрокоптеры</span>                        
+                            <span>Квадрокоптеры</span>                        
                         </a>
                     </li>
                 </ul>
             </section>
             
-            <section class="advantages-slide">
-               
+            <section class="advantages-slide">               
                 <ul class="advantages-slide-сontrols">
-                    <li><a href="#" class="button advantages-button active">Доставка</a></li>
-                    <li><a href="#" class="button advantages-button">Гарантия</a></li>
-                    <li><a href="#" class="button advantages-button">Кредит</a></li>
+                    <li><button class="button advantages-button" type="button">Доставка</button></li>
+                    <li><button class="button advantages-button" type="button">Гарантия</button></li>
+                    <li><button class="button advantages-button" type="button">Кредит</button></li>
                 </ul>                 
                 <div class="advantages-slide-text advantages-slide-text-delivery">           
                     <div class="right-text">
@@ -193,10 +210,26 @@
 
             <section class="producers">
                 <ul class="producers-list">
-                    <li class="producers-item"><a href="#"><img src="img/logo-1.jpg" width="260" height="100" alt="Первый логотип"></a></li>
-                    <li class="producers-item"><a href="#"><img src="img/logo-2.jpg" width="260" height="100" alt="Второй логотип"></a></li>
-                    <li class="producers-item"><a href="#"><img src="img/logo-3.jpg" width="260" height="100" alt="Третий логотип"></a></li>
-                    <li class="producers-item"><a href="#"><img src="img/logo-4.jpg" width="260" height="100" alt="Четвертый логотип"></a></li>
+                    <li class="producers-item">
+                        <a href="producers.html">
+                            <img src="img/logo-1.jpg" width="260" height="100" alt="Первый логотип">
+                        </a>
+                    </li>
+                    <li class="producers-item">
+                        <a href="producers.html">
+                            <img src="img/logo-2.jpg" width="260" height="100" alt="Второй логотип">
+                        </a>
+                    </li>
+                    <li class="producers-item">
+                        <a href="producers.html">
+                            <img src="img/logo-3.jpg" width="260" height="100" alt="Третий логотип">
+                        </a>
+                    </li>
+                    <li class="producers-item">
+                        <a href="producers.html">
+                            <img src="img/logo-4.jpg" width="260" height="100" alt="Четвертый логотип">
+                        </a>
+                    </li>
                 </ul>
             </section>
 
@@ -214,35 +247,49 @@
                     <li>Автотрейдинг</li>
                     <li>ЖелДорЭкспедиция</li>
                 </ul>
-                <a class="button info-button" href="#">Подробнее о нас</a>
+                <a class="button info-button" href="info.html">Подробнее о нас</a>
             </section>
             <section class="contact">
                 <h2>Контакты</h2>
                 <p>
                     Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
                 </p>                  
-                <a class="contact-maps" href="#"><img src="img/map.jpg" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15"></a>
+                <a class="contact-maps" href="map.html">
+                    <img src="img/map.jpg" width="560" height="222" alt="Офис компании по адресу улица Строителей, 15">
+                </a>
 
-                <a class="button contact-button" href="#">Напишите нам</a>
+                <a class="button contact-button" href="contacts.html">Напишите нам</a>
             </section>
         </main>
 
         <footer class="main-footer">            
             <div class="footer-top">  
-                <a class="main-footer-logo">Device</a>
-                <ul class="user-menu">
-                    <li class="user-menu-link user-menu-link-login"><a href="#">Войти</a></li>
-                    <li class="user-menu-link user-menu-link-compare"><a href="#">Сравнить</a></li>
-                    <li class="user-menu-link user-menu-link-basket"><a href="#">Корзина</a></li>
-                </ul>
+                <a class="main-footer-logo" href="index.html">Device</a>
+                <ul class="user-menu-list">
+                    <li class="user-menu-item user-menu-login">
+                        <a class="user-menu-login" href="login.html">Войти</a>
+                    </li>
+                    <li class="user-menu-item user-menu-compare">
+                        <a class="user-menu-compare" href="compare.html">Сравнить</a>
+                    </li>
+                    <li class="user-menu-item user-menu-basket">
+                        <a class="user-menu-basket" href="basket.html">Корзина</a>
+                    </li>
+                </ul>                
             </div>
             <div class="footer-center"> 
                 <address class="footer-address">г. Москва, ул. Строителей, 15</address>
                 <ul class="footer-menu-list">
-                    <li class="footer-menu-item">Доставка</li>
-                    <li class="footer-menu-item">Гарантия</li>
-                    <li class="footer-menu-item">Контакты</li>
-                </ul>             
+                    <li class="footer-menu-item delivery-link">
+                        <a class="delivery-link" href="delivery.html">Доставка</a>
+                    </li>
+                    <li class="footer-menu-item guarantee-link">
+                        <a class="guarantee-link" href="guarantee.html">Гарантия</a>
+                    </li>
+                    <li class="footer-menu-item contacts-link">
+                        <a class="contacts-link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>          
                 <a class="footer-phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
             </div>
             <div class="social">
@@ -251,24 +298,36 @@
                 <a class="social-icon social-icon-twitter" href="#">Twitter</a>
             </div>
             <div class="htmlacademy">
-                <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" width="" height="" alt="Иконка академии"></a>
+                <a href="https://htmlacademy.ru/intensive/htmlcss">
+                    <img src="img/logo-html.svg" alt="Иконка академии">
+                </a>
             </div>
         </footer>
-                
-        <section class="modal modal-feedback">            
-            <p>Ваше имя:</p>
-            <!-- Здесь будет форма -->
-            <p>Ваш e-mail:</p>
-            <!-- Здесь будет форма -->
-            <p>Текст письма:</p>
-            <!-- Здесь будет форма -->
-            <a class="button modal-button" href="#">Отправить</a>
-            <span class="modal-close">x</span>
-        </section>
+        <section class="modal modal-feedback">
+            <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                    <label class="modal-text modal-feedback-name" for="user-name">Ваше имя:</label>
+                    <input class="modal-feedback-name-user" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+                </p>
+                <p>
+                    <label class="modal-text modal-feedback-email" for="user-email">Ваш e-mail:</label>
+                    <input class="modal-feedback-email-user" id="user-email" type="email" name="email" placeholder="email@example.com">
+                </p>
+                <p>
+                    <label class="modal-text modal-feedback-text" for="user-text">Текст письма</label>
+                    <input class="modal-feedback-text-user" id="user-text" type="text" name="text-feedback" placeholder="В свободной форме">
+                </p>
+                <button class="button modal-feedback-button" type="submit">Отправить</button>
+            </form>
+            <button class="modal-close modal-close-feedback" type="button">Закрыть</button>
+        </section>        
+        
         <section class="modal modal-map">
             <h2 class="visually-hidden">Как до нас добраться</h2>
-            <img src="img/map-big.jpg" width="999" height="598" alt="Карта офиса по адресу улица Строителей, 15">
-            <span class="modal-close">x</span>
+            <p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1124.5562740198661!2d37.528520976176566!3d55.68703099511007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1534503082189" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>Офис компании по адресу улица Строителей, 15</iframe>
+            </p>
+            <button class="modal-close modal-close-map" type="button">Закрыть</button>
         </section>
     </body>
 </html>
