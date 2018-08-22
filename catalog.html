@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>HTML Academy: Девайс</title>
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         
@@ -72,8 +74,8 @@
             <section class="filters">
                 <h2>Фильтр:</h2>
                 <h3 class="visually-hidden">Фильтр товаров</h3>
-                <form class="filter-item" method="get" action="https://echo.htmlacademy.ru">
-                    <fieldset>
+                <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+                    <fieldset class="filter-item">
                         <legend class="filter-item-name filter-item-name-cost">Стоимость</legend>
                         <div class="filter-cost">
                             <div class="filter-cost-line">
@@ -83,7 +85,7 @@
                             <div class="filter-cost-texr-right">до 5000</div>
                         </div>
                     </fieldset>
-                    <fieldset>                        
+                    <fieldset class="filter-item">
                         <legend class="filter-item-name filter-item-name-color">Цвет</legend>
                         <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" id="filter-color-black" checked>
                         <label for="filter-color-black">Черный</label> 
@@ -100,7 +102,7 @@
                         <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pink" id="filter-color-pink">
                         <label for="filter-color-pink">Розовый</label>
                     </fieldset> 
-                    <fieldset>
+                    <fieldset class="filter-item">
                         <legend class="filter-item-name filter-item-name-option">Bluetooth</legend>
                         
                         <input class="visually-hidden filter-input filter-input-radio" type="radio" name="option-filter" value="there-is" id="filter-there-is" checked>
@@ -117,22 +119,22 @@
                 <h2>Сортировка:</h2>
                 <ul class="sorting-list">
                     <li class="sorting-item">
-                        <button class="sorting-item-button sorting-item-button-current" type="button">По цене</button>
+                        <a class="sorting-item-button sorting-item-button-current" href="#">По цене</a>
                     </li>
                     <li class="sorting-item">
-                        <button class="sorting-item-button sorting-item-button-current" type="button">По типу</button>
+                        <a class="sorting-item-button sorting-item-button-current" href="#">По типу</a>
                     </li>
                     <li class="sorting-item">
-                        <button class="sorting-item-button sorting-item-button-current" type="button">По популярности</button>
+                        <a class="sorting-item-button sorting-item-button-current" href="#">По популярности</a>
                     </li>
                     <li class="sorting-item">
                         <div class="arrow">
-                            <button class="arrow-button arrow-button-up" type="button">
+                            <a class="arrow-button arrow-button-up" type="button" href="#">
                                 <img src="img/icon-up-dir.svg" alt="Сортировка по возрастанию" class="arrow-up">
-                            </button>
-                            <button class="arrow-button arrow-button-down" type="button">
+                            </a>
+                            <a class="arrow-button arrow-button-down" type="button" href="#">
                                 <img src="img/icon-down-dir.svg" alt="Сортировка по убыванию" class="arrow-down">
-                            </button>
+                            </a>
                         </div>  
                     </li>
                 </ul>                

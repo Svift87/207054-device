@@ -1,0 +1,276 @@
+@font-face {
+    font-family: "Gilroy-bold";
+    src: url(fonts/web/gilroyextrabold.woff),
+         url(fonts/web/gilroyextrabold.woff2);
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: "Gilroy-light";
+    src: url(fonts/web/gilroylight.woff),
+         url(fonts/web/gilroylight.woff2);
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: "Open-sans";
+    src: url(fonts/web/opensans.woff),
+         url(fonts/web/opensans.woff2);
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: "Open-sans-light";
+    src: url(fonts/web/opensanslight.woff),
+         url(fonts/web/opensanslight.woff2);
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    font-family: "Gilroy-bold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+}
+
+.button {
+    background-color: #f0c52e;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.main-header {
+    background-color: #f7e296;
+}
+
+.main-header-logo,
+.main-footer-logo {
+    font-size: 48px;
+    text-transform: uppercase;
+    font-family: "Gilroy-bold", Arial, sans-serif;
+}
+
+.main-header-search {
+    color: #cab97b;
+    font-size: 15px;
+    font-family: "Open-sans", Arial, sans-serif;
+}
+
+.user-navigation-list {
+    font-size: 15px;
+    font-family: "Open-sans", Arial, sans-serif;
+}
+
+.main-navigation,
+.footer-menu-list {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.submenu-catalog-list {
+    font-size: 15px;
+    text-transform: none;
+    font-family: "Open-sans", Arial, sans-serif;
+}
+
+.slide-product h3 {
+    font-size: 47px;
+}
+
+.slide-product p {
+    font-size: 15px;
+    color: #464646;
+    font-family: "Open-sans", Arial, sans-serif;
+}
+
+.slide-product .number {
+    font-size: 179.2px;
+    color: #000000;
+    margin: 0;
+    font-family: "Gilroy-bold", Arial, sans-serif;
+}
+
+.feature-top-list {
+    font-size: 36px;
+    font-family: "Gilroy-light", Arial, sans-serif;
+}
+
+.feature-buttom-list {
+    font-size: 13px;
+    color: #464646;
+    font-family: "Open-sans", Arial, sans-serif;
+}
+
+.advantages-slide {
+    background-color: #e5e5e5; 
+}
+
+.right-text h3 {
+    font-size: 47px;
+}
+
+.right-text p {
+    font-size: 15px;
+    color: #464646;
+    font-family: "Open-sans", Arial, sans-serif;
+}
+
+.info-titile {
+    font-size: 47px;
+}
+
+.info-text {
+    font-size: 15px;
+    color: #464646;
+    font-family: "Open-sans", Arial, sans-serif;    
+}
+
+.info-delivery {
+    font-size: 16px;
+    list-style: circle;
+}
+
+.contact h2 {
+    font-size: 47px;
+}
+
+.contact p {
+    font-size: 15px;
+    color: #464646;
+    font-family: "Open-sans", Arial, sans-serif;    
+}
+
+.main-footer {
+    background-color: #464646;    
+    font-size: 15px;
+    font-family: "Open-sans", Arial, sans-serif;
+}
+
+.main-footer-logo {
+    color: #ffc600;    
+}
+
+.user-menu-item a {
+    color: #7e7e7e;
+}
+
+.footer-address {
+    color: #7e7e7e;
+    font-style: normal;
+}
+
+.footer-menu-item a {
+    color: #ffffff;
+    font-family: "Gilroy-bold", Arial, sans-serif;
+}
+
+.footer-phone {
+    color: #7e7e7e;
+}
+
+.social-icon {
+    color: #7e7e7e;
+}
+
+.modal-close {
+    background-color: #F0C52E;
+}
+
+.modal-feedback {
+    font-size: 18px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+input, textarea {
+    background-color: #F2F2F2;
+    font-size: 14px;
+    font-family: "Open-sans", Arial, sans-serif;
+}
+
+.modal-map {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.container h1 {
+    font-size: 47px;
+}
+
+.breadcrumbs {
+    font-size: 14px;
+    font-family: "Open-sans", Arial, sans-serif;
+}
+
+.filters {
+    background-color: #EFEFEF;
+}
+
+.sorting {
+    background-color: #EFEFEF;
+}
+
+.filters h2,
+.sorting h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.filters h2 {
+    background-color: #DCDCDC;
+}
+
+.filter-item label {
+    font-size: 14px;
+    font-family: "Open-sans-light", Arial, sans-serif;
+}
+
+.filter-cost {
+    font-size: 14px;
+    color: #7e7e7e;
+    font-family: "Gilroy-light", Arial, sans-serif;
+}
+
+.sorting-item-button {
+    font-size: 14px;
+    color: #7e7e7e;    
+}
+
+.catalog-item-action-compare {
+    font-size: 13px;
+    color: #868686;
+    text-transform: none;
+    background-color: #eeeeee;
+    font-family: "Open-sans-light", Arial, sans-serif;
+}
+
+.catalog-item-price {
+    font-size: 16px;
+    color: #7e7e7e;
+    font-family: "Gilroy-light", Arial, sans-serif;
+}
+
+.pagination {
+    background-color: #ebebeb;
+}
+
+.pagination-button {
+    background-color: #ebebeb;
+}
+
+.pagination-list a {
+    color: #7e7e7e;
+}
