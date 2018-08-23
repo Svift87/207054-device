@@ -1,43 +1,73 @@
 @font-face {
-    font-family: "Gilroy-bold";
-    src: url(fonts/web/gilroyextrabold.woff),
-         url(fonts/web/gilroyextrabold.woff2);
-    font-weight: normal; 
-    font-style: normal; 
+    font-family: "Gilroy";
+    src: local("Gilroy Light"),
+        local("Gilroy-Light"),
+        url("../fonts/gilroylight.woff2") format("woff2"),
+        url("../fonts/gilroylight.woff") format ("woff");
+    font-weight: 300; 
+    font-style: normal;
 }
 
 @font-face {
-    font-family: "Gilroy-light";
-    src: url(fonts/web/gilroylight.woff),
-         url(fonts/web/gilroylight.woff2);
-    font-weight: normal; 
-    font-style: normal; 
+    font-family: "Gilroy";
+    src: local("Gilroy Bold"),
+        local("Gilroy-Bold"),
+        url("../fonts/gilroyextrabold.woff2") format("woff2"),
+        url("../fonts/gilroyextrabold.woff") format ("woff");
+    font-weight: 700; 
+    font-style: normal;
 }
 
-@font-face {
-    font-family: "Open-sans";
-    src: url(fonts/web/opensans.woff),
-         url(fonts/web/opensans.woff2);
-    font-weight: normal; 
-    font-style: normal; 
-}
+@font-face { 
+    font-family: "Open Sans"; 
+    src: local("Open Sans"), 
+        local("OpenSans-Regular"), 
+        url("../fonts/opensans.woff2") format("woff2"), 
+        url("../fonts/opensans.woff") format("woff"); 
+    font-weight: 400;    
+    font-style: normal;
+} 
 
-@font-face {
-    font-family: "Open-sans-light";
-    src: url(fonts/web/opensanslight.woff),
-         url(fonts/web/opensanslight.woff2);
-    font-weight: normal; 
-    font-style: normal; 
+@font-face { 
+    font-family: "Open Sans"; 
+    src: local("Open Sans Bold"), 
+        local("OpenSans-Bold"), 
+        url("fonts/opensansbold.woff2") format("woff2"), 
+        url("fonts/opensansbold.woff") format("woff"); 
+    font-weight: 700; 
+    font-style: normal;  
 }
 
 body {
     margin: 0;
     padding: 0;
     
-    font-family: "Gilroy-bold", Arial, sans-serif;
-    font-size: 18px;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 15px;
     font-weight: 400;
-    color: #000000;
+    line-height: 30px;
+    
+    color: #464646;
+    background-color: #ffffff;
+}
+
+.visually-hidden:not(:focus):not(:active), 
+input[type="checkbox"].visually-hidden, 
+input[type="radio"].visually-hidden { 
+    position: absolute; 
+
+    width: 1px; 
+    height: 1px; 
+    margin: -1px; 
+    border: 0; 
+    padding: 0; 
+
+    white-space: nowrap; 
+
+    -webkit-clip-path: inset(100%); 
+    clip-path: inset(100%); 
+    clip: rect(0 0 0 0); 
+    overflow: hidden; 
 }
 
 ul {
@@ -47,6 +77,8 @@ ul {
 .button {
     background-color: #f0c52e;
     text-transform: uppercase;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 700;
 }
 
 a {
@@ -62,62 +94,63 @@ a {
 .main-footer-logo {
     font-size: 48px;
     text-transform: uppercase;
-    font-family: "Gilroy-bold", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 700;
 }
 
 .main-header-search {
     color: #cab97b;
-    font-size: 15px;
-    font-family: "Open-sans", Arial, sans-serif;
-}
-
-.user-navigation-list {
-    font-size: 15px;
-    font-family: "Open-sans", Arial, sans-serif;
 }
 
 .main-navigation,
 .footer-menu-list {
     font-size: 18px;
     text-transform: uppercase;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 700;
 }
 
 .submenu-catalog-list {
     font-size: 15px;
     text-transform: none;
-    font-family: "Open-sans", Arial, sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: 400;
 }
 
 .slide-product h3 {
     font-size: 47px;
-}
-
-.slide-product p {
-    font-size: 15px;
-    color: #464646;
-    font-family: "Open-sans", Arial, sans-serif;
+    color: #000000;    
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 700;
 }
 
 .slide-product .number {
     font-size: 179.2px;
     color: #000000;
     margin: 0;
-    font-family: "Gilroy-bold", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 700;
 }
 
 .feature-top-list {
     font-size: 36px;
-    font-family: "Gilroy-light", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 300;
 }
 
 .feature-buttom-list {
     font-size: 13px;
-    color: #464646;
-    font-family: "Open-sans", Arial, sans-serif;
 }
 
 .advantages-slide {
-    background-color: #e5e5e5; 
+    background-color: #e5e5e5;     
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 700; 
+    color: #000000;
+}
+
+.features-list span {
+    font-size: 18px;
 }
 
 .right-text h3 {
@@ -127,22 +160,36 @@ a {
 .right-text p {
     font-size: 15px;
     color: #464646;
-    font-family: "Open-sans", Arial, sans-serif;
+    font-family: "Open-sans", "Arial", sans-serif;
+    font-weight: 400; 
+}
+
+.info {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 700; 
+    color: #000000;
 }
 
 .info-titile {
-    font-size: 47px;
+    font-size: 47px;    
 }
 
 .info-text {
     font-size: 15px;
     color: #464646;
-    font-family: "Open-sans", Arial, sans-serif;    
+    font-family: "Open-sans", "Arial", sans-serif; 
+    font-weight: 400;
 }
 
 .info-delivery {
     font-size: 16px;
     list-style: circle;
+}
+
+.contact {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 700; 
+    color: #000000;
 }
 
 .contact h2 {
@@ -152,13 +199,15 @@ a {
 .contact p {
     font-size: 15px;
     color: #464646;
-    font-family: "Open-sans", Arial, sans-serif;    
+    font-family: "Open-sans", "Arial", sans-serif;
+    font-weight: 400;
 }
 
 .main-footer {
     background-color: #464646;    
     font-size: 15px;
-    font-family: "Open-sans", Arial, sans-serif;
+    font-family: "Open-sans", "Arial", sans-serif;
+    font-weight: 400;
 }
 
 .main-footer-logo {
@@ -170,17 +219,16 @@ a {
 }
 
 .footer-address {
-    color: #7e7e7e;
+    color: #ffffff;
     font-style: normal;
 }
 
 .footer-menu-item a {
     color: #ffffff;
-    font-family: "Gilroy-bold", Arial, sans-serif;
 }
 
 .footer-phone {
-    color: #7e7e7e;
+    color: #ffffff;
 }
 
 .social-icon {
@@ -192,6 +240,9 @@ a {
 }
 
 .modal-feedback {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 700; 
+    color: #000000;
     font-size: 18px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
@@ -199,20 +250,28 @@ a {
 input, textarea {
     background-color: #F2F2F2;
     font-size: 14px;
-    font-family: "Open-sans", Arial, sans-serif;
+    font-family: "Open-sans", "Arial", sans-serif;
+    font-weight: 700; 
 }
 
 .modal-map {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
+.user-name {
+    opacity: 0.4;
+}
+
 .container h1 {
     font-size: 47px;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 700; 
+    color: #000000;
 }
 
 .breadcrumbs {
     font-size: 14px;
-    font-family: "Open-sans", Arial, sans-serif;
+    color: #cab97b;
 }
 
 .filters {
@@ -227,6 +286,9 @@ input, textarea {
 .sorting h2 {
     font-size: 16px;
     text-transform: uppercase;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 700; 
+    color: #000000;
 }
 
 .filters h2 {
@@ -235,13 +297,21 @@ input, textarea {
 
 .filter-item label {
     font-size: 14px;
-    font-family: "Open-sans-light", Arial, sans-serif;
+    font-family: "Open-sans", "Arial", sans-serif;
+}
+
+.filter-item-name {
+    font-size: 16px;
+    color: #000000;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 700;
 }
 
 .filter-cost {
     font-size: 14px;
     color: #7e7e7e;
-    font-family: "Gilroy-light", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 300;
 }
 
 .sorting-item-button {
@@ -254,13 +324,20 @@ input, textarea {
     color: #868686;
     text-transform: none;
     background-color: #eeeeee;
-    font-family: "Open-sans-light", Arial, sans-serif;
+    font-family: "Open-sans", "Arial", sans-serif;
+    font-weight: 400;
+}
+
+.catalog-item-name {
+    font-size: 18px;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 700;
 }
 
 .catalog-item-price {
     font-size: 16px;
-    color: #7e7e7e;
-    font-family: "Gilroy-light", Arial, sans-serif;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 300;
 }
 
 .pagination {
@@ -272,5 +349,5 @@ input, textarea {
 }
 
 .pagination-list a {
-    color: #7e7e7e;
+    color: #464646;
 }
