@@ -68,46 +68,48 @@
         
                 
         <main>
-            <div class="container">
-                <div class="caption-breadcrumbs">
-                    <h1>Моноподы для селфи</h1>
-                    <ul class="breadcrumbs-list">
-                        <li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
-                        <li class="breadcrumbs-item"><a href="catalog.html">Каталог товаров</a></li>
-                        <li class="breadcrumbs-item breadcrumbs-current"><a href="catalog.html">Моноподы для селфи</a></li>
-                    </ul>
-                </div>
+            <div class="breadcrumbs-wrapper container">                
+                <h1>Моноподы для селфи</h1>
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
+                    <li class="breadcrumbs-item"><a href="catalog.html">Каталог товаров</a></li>
+                    <li class="breadcrumbs-item breadcrumbs-current"><a href="catalog.html">Моноподы для селфи</a></li>
+                </ul>                
             </div>
             <div class="catalog-wrapper-top">
                 <div class="container"> 
                     <div class="filters-caption-sorting">
-                        <h2 class="filters-caption">Фильтр:</h2>
+                        <p>Фильтр:</p>
                         <section class="sorting">
                             <h2>Сортировка:</h2>
                             <ul class="sorting-list">
-                                <div class="sorting-content">
+                                <ul class="sorting-content">
                                     <li class="sorting-item">
                                         <a class="sorting-item-button sorting-item-button-current" href="#">По цене</a>
                                     </li>
                                     <li class="sorting-item">
-                                        <a class="sorting-item-button sorting-item-button-current" href="#">По типу</a>
+                                        <a class="sorting-item-button" href="#">По типу</a>
                                     </li>
                                     <li class="sorting-item">
-                                        <a class="sorting-item-button sorting-item-button-current" href="#">По популярности</a>
+                                        <a class="sorting-item-button" href="#">По популярности</a>
                                     </li>
-                                </div>
-                                <div class="sorting-arrow">
+                                </ul>
+                                <ul class="sorting-arrow">
                                     <li class="sorting-item">
-                                        <div class="arrow">
-                                            <a class="arrow-button arrow-button-up" type="button" href="#">
-                                                <img src="img/icon-up-dir.svg" alt="Сортировка по возрастанию" class="arrow-up">
-                                            </a>
-                                            <a class="arrow-button arrow-button-down" type="button" href="#">
-                                                <img src="img/icon-down-dir.svg" alt="Сортировка по убыванию" class="arrow-down">
-                                            </a>
-                                        </div>  
+                                        <ul class="arrow">
+                                            <li class="sorting-item-up">
+                                                <a class="arrow-button arrow-button-up" type="button" href="#">
+                                                    <img src="img/icon-up-dir.svg" alt="Сортировка по возрастанию" class="arrow-up">
+                                                </a>
+                                            </li>
+                                            <li class="sorting-item-donw">
+                                                <a class="arrow-button arrow-button-down" type="button" href="#">
+                                                    <img src="img/icon-down-dir.svg" alt="Сортировка по убыванию" class="arrow-down">
+                                                </a>
+                                            </li>
+                                        </ul>  
                                     </li>
-                                </div>
+                                </ul>
                             </ul>
 
                         </section>
@@ -118,6 +120,7 @@
                 <div class="container">
                     <div class="filters-sorting-catalog">
                         <section class="filters-panel">
+                            <h2 class="visually-hidden">Фильтр панель</h2>
                             <h3 class="visually-hidden">Фильтр товаров</h3>
                             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
                                 <fieldset class="filter-item">
