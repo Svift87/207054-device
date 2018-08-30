@@ -75,13 +75,33 @@ ul {
 }
 
 .button {
-    background-color: #f0c52e;
-    text-transform: uppercase;
+    display: inline-block;
+    
     font-family: "Gilroy";
-    font-weight: 700;
-    color: #000000;
+    font-weight: 700;    
     font-size: 18px;
     line-height: 30px;
+    
+    width: 220px;
+    height: 40px;
+    
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    
+    color: #000000;
+    background-color: #f0c52e;
+    background-image: repeating-linear-gradient(#ffffff 40%, #f0c52e 40%, #f0c52e 60%, #ffffff 60%, #ffffff 100%);
+    
+    border: none;
+}
+
+.button:hover {
+    background-image: repeating-linear-gradient(#ffffff 0%, #f0c52e 0%, #f0c52e 100%);
+}
+
+.button:active span {
+    opacity: 0.3;
 }
 
 a {
@@ -89,11 +109,19 @@ a {
     color: #000000;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .main-header {
+    position: relative;
     padding: 0 60px;
-    margin-top: 40px;    
+    margin-top: 40px; 
     
-    background-color: #f7e296;
+    height: 300px;
+    
+    background-color: #f7e296;    
 }
 
 .main-header-logo,
@@ -104,6 +132,21 @@ a {
     font-weight: 700;
 }
 
+.main-header-logo:hover,
+.main-footer-logo:hover {
+    opacity: 0.6;
+}
+
+.main-header-logo:active,
+.main-footer-logo:active {
+    opacity: 0.3;
+}
+
+.main-header-logo {
+    position: relative;
+    top: -14px;
+}
+
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -112,7 +155,17 @@ a {
 
 .main-header-search {
     color: #cab97b;
-    width: 200px;
+}
+
+.main-header-search img {
+    position: relative;
+    top: 4px;
+}
+
+.main-header-search input {
+    padding-left: 20px;
+    background-color: #f7e296;
+    border: none;
 }
 
 .user-navigation-list {
@@ -126,8 +179,26 @@ a {
     justify-content: space-between;
 }
 
+.user-navigation-login svg,
+.user-navigation-compare svg,
+.user-navigation-basket svg {
+    padding-right: 13px; 
+}
+
+.user-navigation-login b:hover,
+.user-navigation-compare b:hover,
+.user-navigation-basket b:hover {
+    opacity: 0.6;
+}
+
+.user-navigation-login:active,
+.user-navigation-compare:active,
+.user-navigation-basket:active {
+    opacity: 0.3;
+}
+
 .user-navigation-compare-basket {
-    width: 220px;
+    width: 240px;
     
     display: flex;
     justify-content: space-between;
@@ -161,10 +232,82 @@ a {
     
     font-family: "Gilroy";
     font-weight: 700;
+    
+    display: inline-block;
+    width: 200px;
 }
 
-.header-center {
-    width: 300px;
+.catalog-product {
+    position: relative;
+}
+
+.catalog-product b:hover,
+.submenu-catalog-item a:hover,
+.main-menu-list a:hover {
+    opacity: 0.6;
+}
+
+.catalog-product b:active,
+.submenu-catalog-item a:active,
+.main-menu-list a:active {
+    opacity: 0.3;
+}
+
+.catalog-product img {
+    position: absolute;
+    top: 3px;
+    right: -30px;
+    opacity: 0.3;    
+}
+
+.submenu-catalog {
+    position: absolute;
+    
+    margin: 0;
+    padding: 0;
+    
+    padding-top: 25px;
+    padding-bottom: 40px;
+    padding-left: 60px; 
+    padding-right: 500px;
+
+    list-style: none;
+    
+    width: 600px;
+    
+    left: 0;
+    bottom: 0px;
+    
+    display: none;
+    background-color: #f7e296;
+    
+    z-index: 2;
+}
+
+.menu-catalog-item:hover .submenu-catalog {
+    display: flex;
+}
+
+.submenu-catalog-list {    
+    width: 200px;
+    
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    
+    font-size: 15px;
+    text-transform: none;
+    font-family: "Open Sans";
+    font-weight: 300;
+}
+
+.submenu-catalog-list:first-child {
+    margin-right: 40px;
+}
+
+.submenu-catalog-list:last-child {
+    width: 160px;
 }
 
 .main-menu-list {
@@ -193,39 +336,29 @@ a {
     text-align: right;
 }
 
-.submenu-catalog {
-    margin-top: 30px;
-    margin-bottom: 40px;
-    width: 600px;
-    
-    display: flex;    
-}
-
-.submenu-catalog-list {    
-    width: 200px;
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-    
-    font-size: 15px;
-    text-transform: none;
-    font-family: "Open Sans";
-    font-weight: 300;
-}
-
-.submenu-catalog-list:first-child {
-    margin-right: 40px;
-}
-
-.submenu-catalog-list:last-child {
-    width: 160px;
-}
-
 .container {    
   width: 1160px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/*------------
+Слайдер!!
+----------*/
+
+
+.slide {
+    position: relative;
+    top: -112px;
+    
+    z-index: 1;
+}
+
+.slide-controls {
+    position: absolute;
+    
+    right: 80px;
+    top: 335px;    
 }
 
 .slide-controls-list {
@@ -238,8 +371,12 @@ a {
 }
 
 .slide-product  {
-    display: flex;
     height: 500px;
+    display: none;
+}
+
+.slide-product:nth-child(3) {
+  display: flex;
 }
 
 .slide-img {
@@ -248,21 +385,64 @@ a {
 }
 
 .slide-content {
-    width: 560px;
+    width: 500px;
+    position: relative
+}
+
+.line-number {  
+    width: 500px;
+    
+    display: flex;
+    justify-content: space-between;
+    
+    margin-top: 37px;
+    margin-bottom: 40px;
+}
+
+.horizontal-line-white {
+    width: 100px;
+    height: 7px;
+    
+    background-color: #ffffff;
+    
+}
+
+.number {
+    position: absolute;
+    
+    font-size: 179.2px;
+    color: #ffffff;
+    font-family: "Gilroy";
+    font-weight: 700;
+    
+    margin: 0;
+    padding: 0;
+    top: 65px;
+    right: -15px;
+    z-index: 1;
 }
 
 .slide-product h3 {
+    position: relative;
+    
     font-size: 47px;
     color: #000000;    
     font-family: "Gilroy";
+    line-height: 1.2;
+    
+    margin: 0;
+    padding: 0;
+    
+    margin-bottom: 30px;
+    z-index: 2;
 }
 
-.slide-product .number {
-    font-size: 179.2px;
-    color: #000000;
-    margin: 0;
-    font-family: "Gilroy";
-    font-weight: 700;
+.slide-product p {
+    margin-bottom: 50px;
+}
+
+.slide-button {
+    margin-bottom: 58px;
 }
 
 .feature-top-list {
@@ -304,6 +484,10 @@ a {
     width: 160px;
 }
 
+/*------------
+Конец Слайдера!!
+----------*/
+
 .features-list {
     display: flex;
     justify-content: space-between;
@@ -319,14 +503,77 @@ a {
     width: 160px;
 }
 
-.features-list span {
+.directory-container {
+    position: relative;
+}
+
+.directory-container:hover div,
+.directory-container:active div{
+    opacity: 1;
+}
+
+.directory-container:active span, 
+.directory-container:active img{
+    opacity: 0.3;
+}
+
+.directory-background {
+    width: 160px;
+    height: 160px;
+    
+    margin-bottom: 30px;
+    
+    background-color: #f0c52e;
+    opacity: 0.5;
+}
+
+.directory-img {
+    position: absolute;
+}
+
+.directory-img-1 {
+    left: 31px;
+    top: 52px; 
+}
+
+.directory-img-2 {
+    left: 38px;
+    top: 41px; 
+}
+
+.directory-img-3 {
+    left: 49px;
+    top: 38px; 
+}
+
+.directory-img-4 {
+    left: 28px;
+    top: 50px; 
+}
+
+.directory-img-5 {
+    left: 55px;
+    top: 32px; 
+}
+
+.directory-img-6 {
+    left: 13px;
+    top: 49px; 
+}
+
+.feature-item span {
     font-size: 18px;
     font-family: "Gilroy";
     font-weight: 700;
 }
 
 .advantages-slide {    
-    background-color: #e5e5e5;   
+    background-color: #e5e5e5;
+    position: relative;
+}
+
+.advantages-slide .container {
+    background-color: #e5e5e5; 
 }
 
 .advantages-slide-wrapper {    
@@ -334,17 +581,49 @@ a {
     margin-bottom: 94px;
 }
 
-.advantages-slide-controls{    
-    margin: 0;
-    padding: 0;
+.advantages-slide-controls {
+    width: 277px;
+}
 
-    list-style: none;
+.color-button {
+    width: 160px;
+    height: 40px;
+    margin-bottom: 20px;
 }
 
 .advantages-button {
-    width: 280px;
-    margin-bottom: 20px;
-    margin-right: 120px;
+    width: 160px;
+    background-image: repeating-linear-gradient(#e5e5e5 40%, #f0c52e 40%, #f0c52e 60%, #e5e5e5 60%, #e5e5e5 100%);
+}
+
+.color-button:active {
+    width: 277px;
+    background-color: #000000;
+}
+
+.advantages-button:active {
+    color: #f7e184;
+    background-color: #000000;
+    background-image: none;
+}
+
+.vertical-line {
+    width: 7px;
+    height: 319px;
+    background-color: #000000;
+    position: relative;
+    top: -80px;
+}
+
+.advantages-slide-text-container {
+    margin-left: 116px;
+    display: none;
+    width: 700px;
+    justify-content: space-between;
+}
+
+.advantages-slide-text-container:nth-child(1) {
+    display: flex;
 }
 
 .right-text {
@@ -357,12 +636,15 @@ a {
     color: #000000;
          
     font-family: "Gilroy";
-    font-weight: 700;  
+    font-weight: 700; 
+    
+    margin-bottom: 30px;
 }
 
 .right-text p {
     font-size: 15px;
     font-family: "Open-sans";
+    color: #464646;
 }
 
 .producers {
@@ -379,6 +661,54 @@ a {
     justify-content: space-between;
 }
 
+.producers-img-1 {
+    background-image: url(../img/logo-1-gray.jpg);
+    display: block;
+    width: 260px;
+    height: 100px;
+}
+
+.producers-img-1:hover,
+.producers-img-1:active {
+    background-image: url(../img/logo-1.jpg);
+}
+
+.producers-img-2 {
+    background-image: url(../img/logo-2-gray.jpg);
+    display: block;
+    width: 260px;
+    height: 100px;
+}
+
+.producers-img-2:hover,
+.producers-img-2:active{
+    background-image: url(../img/logo-2.jpg);
+}
+
+.producers-img-3 {
+    background-image: url(../img/logo-3-gray.jpg);
+    display: block;
+    width: 260px;
+    height: 100px;
+}
+
+.producers-img-3:hover,
+.producers-img-3:active{
+    background-image: url(../img/logo-3.jpg);
+}
+
+.producers-img-4 {
+    background-image: url(../img/logo-4-gray.jpg);
+    display: block;
+    width: 260px;
+    height: 100px;
+}
+
+.producers-img-4:hover,
+.producers-img-4:active{
+    background-image: url(../img/logo-4.jpg);
+}
+
 .info-contact {
     margin-bottom: 90px;
     
@@ -386,22 +716,53 @@ a {
     justify-content: space-between;
 }
 
+.horizontal-line-black {
+    width: 80px;
+    height: 7px;
+    
+    background-color: #000000;
+}
+
 .info {
-    width: 460px;    
+    width: 472px; 
 }
 
 .info-titile {
     font-size: 47px;     
     color: #000000;
     font-family: "Gilroy";
+    margin-top: 40px;
+    margin-bottom: 45px;
 }
 
+.info-text {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 35px;
+}
+
+.info-text:nth-child(4) {
+    margin-bottom: 80px;
+}
+
+
 .info-delivery {
+    margin: 0;
+    padding: 0;
+    
+    list-style: none; 
+    
     font-size: 16px;
-    list-style: circle;     
     color: #000000;
     font-family: "Gilroy";
     font-weight: 700;
+    
+    margin-bottom: 73px;
+}
+
+.info-delivery svg {
+    opacity: 0.3;
+    margin-right: 25px;
 }
 
 .contact {
@@ -412,9 +773,23 @@ a {
     font-size: 47px;
     color: #000000;
     font-family: "Gilroy";
+    margin-top: 40px;
+    margin-bottom: 45px;
+}
+
+.contact p {
+    margin-bottom: 40px;
+}
+
+.contact-maps img{
+    margin-bottom: 67px;
 }
 
 .main-footer {
+    background-color: #464646;
+}
+
+.main-footer .container {
     background-color: #464646;
 }
 
@@ -439,31 +814,27 @@ a {
     
     display: flex;
     justify-content: space-between;
-}
-
-.user-menu-compare-basket {
-    width: 215px;
-        
-    margin: 0;
-    padding: 0;    
     
-    list-style: none;
-    
-    margin-left: 40px;
-    
-    display: flex;
-    justify-content: space-between;
+    width: 325px;
 }
 
 .user-menu-item a,
 .user-navigation-item a {
-    color: #7e7e7e;
     font-family: "Open-sans";
 }
 
-.user-navigation-login,
-.user-menu-login {
-    display: flex;
+.user-menu-item a {
+    padding-left: 12px;
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+.user-menu-item:hover {
+    opacity: 0.6;
+}
+
+.user-menu-item:active {
+    opacity: 0.3;
 }
 
 .footer-center {
@@ -493,11 +864,17 @@ a {
     
     font-family: "Gilroy";
     font-weight: 700;
-    
 }
 
 .footer-phone {
     color: #ffffff;    
+}
+
+.horizontal-line-yelow {
+    width: 80px;
+    height: 7px;
+    
+    background-color: #ffc600;
 }
 
 .social-htmlacademy {
@@ -509,10 +886,40 @@ a {
 
 .social {
     width: 160px;
+    display: flex;
 }
 
 .social-icon {
-    color: #7e7e7e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    
+    margin-right: 23px;   
+    opacity: 0.3
+}
+
+.social-icon:last-child {
+    margin-right: 0;
+}
+
+.social-icon:hover {
+    opacity: 0.6;
+}
+
+.social-icon:active {
+    opacity: 0.1;
+}
+
+.htmlacademy:hover,
+.footer-menu-item:hover {
+    opacity: 0.6;
+}
+
+.htmlacademy:active,
+.footer-menu-item:active {
+    opacity: 0.3;
 }
 
 .modal {
