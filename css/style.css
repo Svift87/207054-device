@@ -368,23 +368,14 @@ img {
     top: 335px;    
 }
 
-.slide-controls-radio {
-    display: none;
-}
-
-.controls-radio-button-1:checked ~ 
+.controls-radio-button-1:checked ~  
 .slide-product-self-stick {
-    
+    display: flex;
 }
 
-.controls-radio-button-2:checked ~ 
+.controls-radio-button-2:checked ~  
 .slide-product-fitness-bracelet {
-    
-}
-
-.controls-radio-button-3:checked ~ 
-.slide-product-quadrupter {
-    
+    display: flex;
 }
 
 .slide-product  {
@@ -392,8 +383,9 @@ img {
     display: none;
 }
 
-.slide-product:nth-child(3) {
-  display: flex;
+.controls-radio-button-3:checked ~  
+.slide-product-quadrupter {
+    display: flex;
 }
 
 .slide-img {
