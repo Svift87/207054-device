@@ -355,19 +355,36 @@ img {
 }
 
 .slide-controls {
-    position: absolute;
-    
-    right: 80px;
-    top: 335px;    
-}
-
-.slide-controls-list {
     width: 80px;
     display: flex;
     justify-content: space-between;
     
     margin: 0;
     padding: 0;
+    
+    position: absolute;
+    
+    right: 80px;
+    top: 335px;    
+}
+
+.slide-controls-radio {
+    display: none;
+}
+
+.controls-radio-button-1:checked ~ 
+.slide-product-self-stick {
+    
+}
+
+.controls-radio-button-2:checked ~ 
+.slide-product-fitness-bracelet {
+    
+}
+
+.controls-radio-button-3:checked ~ 
+.slide-product-quadrupter {
+    
 }
 
 .slide-product  {
