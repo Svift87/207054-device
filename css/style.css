@@ -80,14 +80,13 @@ ul {
     font-family: "Gilroy";
     font-weight: 700;    
     font-size: 18px;
-    line-height: 30px;
+    line-height: 40px;
     
     width: 220px;
     height: 40px;
     
     text-align: center;
     text-transform: uppercase;
-    vertical-align: middle;
     
     color: #000000;
     background-color: #f0c52e;
@@ -177,6 +176,17 @@ img {
     
     display: flex;
     justify-content: space-between;
+}
+
+.user-navigation-login {
+    display: flex;
+    
+    position: relative;
+}
+
+.user-navigation-login svg {
+    position: relative;
+    top: 8px;
 }
 
 .user-navigation-login svg,
@@ -342,11 +352,6 @@ img {
   padding: 0 20px;
 }
 
-/*------------
-Слайдер!!
-----------*/
-
-
 .slide {
     position: relative;
     top: -112px;
@@ -365,27 +370,52 @@ img {
     position: absolute;
     
     right: 80px;
-    top: 335px;    
+    top: 350px;   
+    
+    z-index: 1;
 }
 
-.controls-radio-button-1:checked ~  
-.slide-product-self-stick {
-    display: flex;
-}
-
-.controls-radio-button-2:checked ~  
-.slide-product-fitness-bracelet {
-    display: flex;
+.slide-controls label {
+    position: relative;
+    
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    
+    cursor: pointer;
 }
 
 .slide-product  {
-    height: 500px;
     display: none;
 }
 
-.controls-radio-button-3:checked ~  
-.slide-product-quadrupter {
+.controls-radio-button-1:checked ~ .slide-product-self-stick,
+.controls-radio-button-2:checked ~ .slide-product-fitness-bracelet,
+.controls-radio-button-3:checked ~ .slide-product-quadrupter {
     display: flex;
+}
+
+#controls-radio-1:checked ~ .slide-controls .slide-controls-radio-1::before,
+#controls-radio-2:checked ~ .slide-controls .slide-controls-radio-2::before,
+#controls-radio-3:checked ~ .slide-controls .slide-controls-radio-3::before {
+    content: "";
+    
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    
+    width: 4px;
+    height: 4px;
+    
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    
+    z-index: 2;    
 }
 
 .slide-img {
@@ -413,7 +443,6 @@ img {
     height: 7px;
     
     background-color: #ffffff;
-    
 }
 
 .number {
@@ -492,10 +521,6 @@ img {
 .feature-buttom-item:last-child {
     width: 160px;
 }
-
-/*------------
-Конец Слайдера!!
-----------*/
 
 .features-list {
     display: flex;
@@ -591,29 +616,131 @@ img {
 }
 
 .advantages-slide-controls {
+    position: relative;
+    
     width: 277px;
 }
 
-.color-button {
+.advantages-slide-controls label {
+    position: relative;
+    
+    display: inline-block;
+    
+    font-family: "Gilroy";
+    font-weight: 700;    
+    font-size: 18px;
+    line-height: 40px;
+    
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    
     width: 160px;
     height: 40px;
     margin-bottom: 20px;
-}
-
-.advantages-button {
-    width: 160px;
+    
+    cursor: pointer;
+    
     background-image: repeating-linear-gradient(#e5e5e5 40%, #f0c52e 40%, #f0c52e 60%, #e5e5e5 60%, #e5e5e5 100%);
 }
 
-.color-button:active {
-    width: 277px;
-    background-color: #000000;
+.advantages-slide-controls label:hover {
+    background-image: repeating-linear-gradient(#e5e5e5 0%, #f0c52e 0%, #f0c52e 100%, #e5e5e5 100%);
 }
 
-.advantages-button:active {
-    color: #f7e184;
+.advantages-slide-text-container {
+    display: none;
+}
+
+.advantages-button-1:checked ~ .advantages-slide-text .advantages-slide-text-delivery,
+.advantages-button-2:checked ~ .advantages-slide-text .advantages-slide-text-guarantee,
+.advantages-button-3:checked ~ .advantages-slide-text .advantages-slide-text-credit {
+    display: flex;
+}
+
+.advantages-button-1 .advantages-slide-controls-radio-1::after,
+.advantages-button-2 .advantages-slide-controls-radio-2::after,
+.advantages-button-3 .advantages-slide-controls-radio-3::after {
+    content: ""; 
+    
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    
+    text-align: center;
+    
+    width: 160px;
+    height: 40px;
+    margin-bottom: 20px;
+        
+    z-index: 1;
+}
+
+#advantages-radio-1:checked ~ .advantages-slide-controls .advantages-slide-controls-radio-1::before {
+    content: "Доставка";
+    
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    
+    text-align: center;
+    
+    color: #f0c52e;
+    
+    width: 160px;
+    height: 40px;
+    padding-right: 117px;
+    margin-bottom: 20px;
+    
     background-color: #000000;
-    background-image: none;
+        
+    z-index: 2;   
+}
+
+#advantages-radio-2:checked ~ .advantages-slide-controls .advantages-slide-controls-radio-2::before {
+    content: "Гарантия";
+    
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    
+    text-align: center;
+    
+    color: #f0c52e;
+    
+    width: 160px;
+    height: 40px;
+    padding-right: 117px;
+    margin-bottom: 20px;
+    
+    background-color: #000000;
+        
+    z-index: 2;   
+}
+
+#advantages-radio-3:checked ~ .advantages-slide-controls .advantages-slide-controls-radio-3::before {
+    content: "Кредит";
+    
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    
+    text-align: center;
+    
+    color: #f0c52e;
+    
+    width: 160px;
+    height: 40px;
+    padding-right: 117px;
+    margin-bottom: 20px;
+    
+    background-color: #000000;
+        
+    z-index: 2;   
 }
 
 .vertical-line {
@@ -626,13 +753,8 @@ img {
 
 .advantages-slide-text-container {
     margin-left: 116px;
-    display: none;
     width: 700px;
     justify-content: space-between;
-}
-
-.advantages-slide-text-container:nth-child(1) {
-    display: flex;
 }
 
 .right-text {
@@ -824,7 +946,24 @@ img {
     display: flex;
     justify-content: space-between;
     
-    width: 325px;
+    width: 320px;
+}
+
+.user-menu-login {
+    display: flex;
+    
+    position: relative;
+}
+
+.user-menu-login svg {
+    position: relative;
+    top: 8px;
+}
+
+.user-menu-login svg,
+.user-menu-compare svg,
+.user-menu-basket svg {
+    padding-right: 13px; 
 }
 
 .user-menu-item a,
@@ -937,7 +1076,65 @@ img {
 }
 
 .modal-feedback {
+    position: fixed;
+    
+    display: none;
+    
+    top: 150px;
+    left: 50%;
+    margin-left: -480px;
+    
+    width: 960px;
+    height: 550px;
+    
+    background-color: #ffffff;
+    
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    
+    z-index: 10;
+}
+
+.modal-close {
+    position: absolute;
+    
+    top: 22px;
+    right: 22px;
+    
+    width: 55px;
+    height: 55px;
+    
+    background-color: #ffc600;
+    border: 0;
+    border-radius: 50%;
+    
+    font-size: 0;
+
+    cursor: pointer;
+    
+    opacity: 0.5;
+}
+
+.modal-close::before,
+.modal-close::after {
+    content: "";
+
+    position: absolute;
+
+    top: 25px;
+    left: 13px;
+
+    width: 30px;
+    height: 3px;
+
+    background-color: #ffffff;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
 }
 
 .modal-feedback-form {
@@ -981,15 +1178,30 @@ img {
     width: 200px;
 }
 
-.modal-close {
-    background-color: #F0C52E;
-}
-
 .modal-map {
+    position: fixed;
+    
+    display: none;
+    
+    top: 150px;
+    left: 50%;
+    margin-left: -480px;
+    
+    width: 960px;
+    height: 550px;
+    
+    background-color: #ffffff;
+    
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    
+    z-index: 10;
 }
 
 iframe {
+    width: 960px;
+    height: 560px;
+    
+    margin: 0;
     border: 0;
 }
 
