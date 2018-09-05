@@ -11,18 +11,21 @@
             <header class="main-header">
                 <a class="main-header-logo" href="index.html">Device</a>
                 <div class="header-top">
-                    <div class="main-header-search">  
-                        <label for="search-icon">
-                            <img src="img/search.svg" alt="Иконка поиска">
-                        </label>
-                        <input type="search" id="search-icon" name="main header search" placeholder="Поиск по сайту">
+                    <div class="header-top-search">
+                        <div class="main-header-search">  
+                            <label for="search-icon">
+                                <img src="img/search.svg" alt="Иконка поиска">
+                            </label>
+                            <input type="search" id="search-icon" name="main header search" placeholder="Поиск по сайту"> 
+                            <button class="button button-search" type="button">Найти</button>
+                        </div>
                     </div>
                     <ul class="user-navigation-list">
                         <li class="user-navigation-item"> 
                             <a class="user-navigation-login" href="login.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
                                 <b>Валентин Петухов</b>
-                                <div class="user-name">Выйти</div>
+                                <div class="user-navigation-name-catalog">Выйти</div>
                             </a>
                         </li>
                         <ul class="user-navigation-compare-basket">
@@ -83,8 +86,14 @@
             <div class="breadcrumbs-wrapper container">                
                 <h1>Моноподы для селфи</h1>
                 <ul class="breadcrumbs-list">
-                    <li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
-                    <li class="breadcrumbs-item"><a href="catalog.html">Каталог товаров</a></li>
+                    <li class="breadcrumbs-item">
+                        <a href="index.html">Главная</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="4" height="7" viewBox="0 0 4 7"><path d="M3.83 3.132L.861.144a.5.5 0 0 0-.713 0 .508.508 0 0 0 0 .718l2.611 2.629L.148 6.12a.51.51 0 0 0 0 .72.5.5 0 0 0 .713 0L3.83 3.852a.51.51 0 0 0 .147-.36.507.507 0 0 0-.147-.36z"/></svg>
+                    </li>
+                    <li class="breadcrumbs-item">
+                        <a href="catalog.html">Каталог товаров</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="4" height="7" viewBox="0 0 4 7"><path d="M3.83 3.132L.861.144a.5.5 0 0 0-.713 0 .508.508 0 0 0 0 .718l2.611 2.629L.148 6.12a.51.51 0 0 0 0 .72.5.5 0 0 0 .713 0L3.83 3.852a.51.51 0 0 0 .147-.36.507.507 0 0 0-.147-.36z"/></svg>
+                    </li>
                     <li class="breadcrumbs-item breadcrumbs-current"><a href="catalog.html">Моноподы для селфи</a></li>
                 </ul>                
             </div>
@@ -110,20 +119,19 @@
                                     <li class="sorting-item">
                                         <ul class="arrow">
                                             <li class="sorting-item-up">
-                                                <a class="arrow-button arrow-button-up" type="button" href="#">
-                                                    <img src="img/icon-up-dir.svg" alt="Сортировка по возрастанию" class="arrow-up">
+                                                <a class="arrow-button arrow-button-up" href="#">
+                                                    <img src="img/icon-up-dir.svg" alt="Сортировка по возрастанию">
                                                 </a>
                                             </li>
                                             <li class="sorting-item-donw">
-                                                <a class="arrow-button arrow-button-down" type="button" href="#">
-                                                    <img src="img/icon-down-dir.svg" alt="Сортировка по убыванию" class="arrow-down">
+                                                <a class="arrow-button arrow-button-down" href="#">
+                                                    <img src="img/icon-down-dir.svg" alt="Сортировка по убыванию">
                                                 </a>
                                             </li>
                                         </ul>  
                                     </li>
                                 </ul>
                             </ul>
-
                         </section>
                     </div>
                 </div>
@@ -135,43 +143,72 @@
                             <h2 class="visually-hidden">Фильтр панель</h2>
                             <h3 class="visually-hidden">Фильтр товаров</h3>
                             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+                                <div class="horizontal-line-catalog"></div>
                                 <fieldset class="filter-item">
                                     <legend class="filter-item-name filter-item-name-cost">Стоимость</legend>
-                                    <div class="filter-cost">
-                                        <div class="filter-cost-line">
-                                            <div class="filter-cost-line-point"></div>
+                                    <div class="range-filter">
+                                        <div class="range-controls">
+                                            <div class="scale">
+                                                <div class="bar">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="toggle toggle-min"> 
+                                                
+                                            </div>
+                                            <div class="toggle toggle-max">
+                                                
+                                            </div>
                                         </div>
-                                        <div class="texr-left-right">
-                                            <div class="filter-cost-texr-left">от 0</div>
-                                            <div class="filter-cost-texr-right">до 5000</div>
+                                        <div class="price-controls">
+                                            <label class="min-price">
+                                                от 0
+                                            </label>
+                                            <label class="max-price">
+                                                до 5000
+                                            </label>
                                         </div>
-                                    </div>
+                                    </div>                                     
                                 </fieldset>
+                                <div class="horizontal-line-catalog"></div>
                                 <fieldset class="filter-item">
                                     <legend class="filter-item-name filter-item-name-color">Цвет</legend>
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" id="filter-color-black" checked>
-                                    <label for="filter-color-black">Черный</label> 
-
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="white" id="filter-color-white" checked>
-                                    <label for="filter-color-white">Белый</label>
-
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="blue" id="filter-color-blue">
-                                    <label for="filter-color-blue">Синий</label>
-
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="red" id="filter-color-red">
-                                    <label for="filter-color-red">Красный</label>
-
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pink" id="filter-color-pink">
-                                    <label for="filter-color-pink">Розовый</label>
+                                    <ul>
+                                        <li class="filter-optional">
+                                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" id="filter-color-black" checked>
+                                            <label for="filter-color-black">Черный</label> 
+                                        </li>
+                                        <li class="filter-optional">
+                                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="white" id="filter-color-white">
+                                            <label for="filter-color-white">Белый</label>
+                                        </li>
+                                        <li class="filter-optional">
+                                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="blue" id="filter-color-blue" checked>
+                                            <label for="filter-color-blue">Синий</label>
+                                        </li>
+                                        <li class="filter-optional">
+                                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="red" id="filter-color-red" checked>
+                                            <label for="filter-color-red">Красный</label>
+                                        </li>
+                                        <li class="filter-optional">
+                                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pink" id="filter-color-pink">
+                                            <label for="filter-color-pink">Розовый</label>
+                                        </li>
+                                    </ul>
                                 </fieldset> 
+                                <div class="horizontal-line-catalog"></div>
                                 <fieldset class="filter-item">
                                     <legend class="filter-item-name filter-item-name-option">Bluetooth</legend>
-
-                                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="option-filter" value="there-is" id="filter-there-is" checked>
-                                    <label for="filter-there-is">Есть</label>
-
-                                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="option-filter" value="not" id="filter-not">
-                                    <label for="filter-not">Нет</label> 
+                                    <ul>
+                                        <li class="filter-optional">
+                                            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="option-filter" value="there-is" id="filter-there-is" checked>
+                                            <label for="filter-there-is">Есть</label>
+                                        </li>
+                                        <li class="filter-optional">
+                                            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="option-filter" value="not" id="filter-not">
+                                            <label for="filter-not">Нет</label> 
+                                        </li>
+                                    </ul>
                                 </fieldset>
                                 <button type="submit" class="button filter-item-button">Показать</button>       
                             </form>
@@ -194,7 +231,7 @@
                                                     Любительская селфи-палка
                                                 </a>
                                             </div>                       
-                                            <div class="catalog-item-price-container">                        
+                                            <div class="catalog-item-price-container"> 
                                                 <span class="catalog-item-price">
                                                     500 руб.
                                                 </span>
@@ -241,10 +278,11 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="catalog-item">                           
+                                    <li class="catalog-item"> 
+                                        <img class="catalog-item-new-icon" src="img/NEW.png" width="60" height="60" alt="Новинка">                          
                                         <div class="catalog-item-img">
                                             <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                                            <div class="catalog-item-action">
+                                            <div class="catalog-item-action"> 
                                                 <button class="button catalog-item-action-buy" type="button">В корзину</button>
                                                 <button class="button catalog-item-action-compare" type="button">Добавить к сравнению</button>
                                             </div>
@@ -281,27 +319,29 @@
             <div class="container">
                 <div class="footer-top">  
                     <a class="main-footer-logo" href="index.html">Device</a>
-                    <ul class="user-menu-list-catalog">
-                        <li class="user-menu-item user-menu-login-catalog">
+                    <ul class="user-menu-list">
+                        <li class="user-menu-item user-menu-login">
                             <a class="user-menu-login" href="login.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#FFC600" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
                                 <b>Валентин Петухов</b>
-                                <div class="user-name">Выйти</div>
+                                <div class="user-menu-name-catalog">Выйти</div>
                             </a>
                         </li>
-                        <li class="user-menu-item user-menu-compare">
-                            <a class="user-menu-compare" href="compare.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path fill="#FFC600" d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>
-                                <b>Сравнить</b>
-                            </a>
-                        </li>
-                        <li class="user-menu-item user-menu-basket">
-                            <a class="user-menu-basket" href="basket.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="#FFC600" d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>
-                                <b>Корзина</b>
-                            </a>
-                        </li>
-                    </ul>                                    
+                        <ul class="user-menu-compare-basket">
+                            <li class="user-menu-item user-menu-compare">
+                                <a class="user-menu-compare" href="compare.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path fill="#FFC600" d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>
+                                    <b>Сравнить</b>
+                                </a>
+                            </li>
+                            <li class="user-menu-item user-menu-basket">
+                                <a class="user-menu-basket" href="basket.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="#FFC600" d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>
+                                    <b>Корзина</b>
+                                </a>
+                            </li>
+                        </ul>
+                    </ul>      
                 </div>
                 <div class="footer-center"> 
                     <address class="footer-address">г. Москва, ул. Строителей, 15</address>
