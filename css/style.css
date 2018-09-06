@@ -1042,14 +1042,14 @@ img {
     margin-bottom: 40px;
 }
 
-.contact-maps img{
-    margin-bottom: 59px;
-}
-
 .contact-button,
 .info-button {
     width: 260px;
     margin-bottom: 82px;
+}
+
+.contact-button {
+    margin-top: 59px;
 }
 
 .main-footer {
@@ -1240,6 +1240,30 @@ img {
     opacity: 0.3;
 }
 
+@keyframes invisibility {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes redness {
+    0% {
+        background-color: rgba(234, 234, 234, 0.5);
+    }
+    
+    50% {
+        background-color: rgba(255, 0, 0, 0.5);
+    }
+    
+    100% {
+        background-color: rgba(234, 234, 234, 0.5);
+    }
+}
+
 .modal {
     width: 960px;
     margin: 0 auto;
@@ -1264,6 +1288,16 @@ img {
     z-index: 10;
 }
 
+.modal-feedback-show {
+    display: block;
+    
+    animation: invisibility 1s;
+}
+
+.modal-error {
+    animation: redness 0.5s;
+}
+
 .modal-close {
     position: absolute;
     
@@ -1282,6 +1316,8 @@ img {
     cursor: pointer;
     
     opacity: 0.5;
+    
+    z-index: 50;
 }
 
 .modal-close::before,
@@ -1336,24 +1372,55 @@ img {
 }
 
 .modal-feedback-content input {
-    width: 340px;
-    height: 45px;
-    padding-left: 20px;
+    width: 334px;
+    height: 39px;
+    padding-left: 17px;
     
-    background-color: #f2f2f2;
-    border: none;
+    background-color: rgba(234, 234, 234, 0.5);
+    border: 3px solid rgba(234, 234, 234, 0);
+}
+
+.modal-feedback-content input:hover,
+.modal-feedback-form textarea:hover {
+    background-color: rgba(234, 234, 234, 0.8);
+}
+
+.modal-feedback-content input:focus,
+.modal-feedback-form textarea:focus {
+    background-color: #ffffff;
+    border: 3px solid #f7e296;
+    outline: none;
 }
 
 .modal-feedback-form textarea {
-    width: 720px;
-    padding: 15px 20px;
+    width: 714px;
+    padding-left: 17px;
+    padding-top: 12px;
     
-    background-color: #f2f2f2;
-    border: none;
+    background-color: rgba(234, 234, 234, 0.5);
+    border: 3px solid rgba(234, 234, 234, 0);
 }
 
 .modal-feedback-button {
     width: 200px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(2000px);
+    }
+
+    70% {
+        transform: translateY(-30px);
+    }
+
+    90% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .modal-map {
@@ -1366,18 +1433,38 @@ img {
     margin-left: -480px;
     
     width: 960px;
-    height: 550px;
-    
-    background-color: #ffffff;
-    
+    height: 520px;
+        
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     
-    z-index: 10;
+    z-index: 25;
+}
+
+.modal-map p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    
+    margin: 0;
+}
+
+.modal-map iframe {
+    position: relative;
+    z-index: 20;
+    
+    border: none;
+}
+
+.modal-map-show{
+    display: block;
+    
+    animation: bounce 1s;
 }
 
 iframe {
     width: 960px;
-    height: 560px;
+    height: 520px;
     
     margin: 0;
     border: 0;

@@ -319,7 +319,6 @@
                         <a class="contact-maps" href="map.html">
                             <img src="img/map.jpg" width="560" height="222" alt="Офис компании по адресу улица Строителей, 15">
                         </a>
-
                         <a class="button contact-button" href="contacts.html">
                             <span>Напишите нам</span>
                         </a>
@@ -401,16 +400,16 @@
             <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="post">
                 <div class="modal-feedback-content">
                     <p>
-                        <label class="modal-text modal-feedback-name" for="user-name">Ваше имя:</label><br>
+                        <label class="modal-text modal-feedback-name" for="user-name">Ваше имя:</label>
                         <input class="modal-feedback-name-user" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
                     </p>
                     <p>
-                        <label class="modal-text modal-feedback-email" for="user-email">Ваш e-mail:</label><br>
+                        <label class="modal-text modal-feedback-email" for="user-email">Ваш e-mail:</label>
                         <input class="modal-feedback-email-user" id="user-email" type="email" name="email" placeholder="email@example.com">
                     </p>
                 </div>
                 <p>
-                    <label class="modal-text modal-feedback-text" for="user-text">Текст письма</label><br>
+                    <label class="modal-text modal-feedback-text" for="user-text">Текст письма</label>
                     <textarea class="modal-feedback-text-user" id="user-text" name="text-feedback" placeholder="В свободной форме" rows="5" cols="94"></textarea>
                 </p>
                 <button class="button modal-feedback-button" type="submit">
@@ -421,10 +420,118 @@
         </section>        
         <section class="modal modal-map">
             <h2 class="visually-hidden">Как до нас добраться</h2>
-            <button class="modal-close modal-close-map" type="button">Закрыть</button>
-            <p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1124.5562740198661!2d37.528520976176566!3d55.68703099511007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1534503082189" width="960" height="450" allowfullscreen></iframe>
-            </p>
+            <button class="modal-close" type="button">Закрыть</button>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1124.5562740198661!2d37.528520976176566!3d55.68703099511007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1534503082189" width="960" height="450" allowfullscreen></iframe>
+            <p><img src="img/map.jpg" width="800" height="400" alt="Офис компании по адресу ул. Стротелей 15, Санкт-Петербург"></p>
         </section>
+        
+        <script>
+            var link = document.querySelector(".contact-button");
+            
+            var popap = document.querySelector(".modal-feedback");
+            var close = popap.querySelector(".modal-close");
+            
+            var form = popap.querySelector("form");
+            var surname = popap.querySelector(".modal-feedback-name-user"); 
+            var email = popap.querySelector(".modal-feedback-email-user");
+            var letter = popap.querySelector(".modal-feedback-text-user");
+            
+            var isStorageSupport = true;
+            var storage = "";
+            
+            try {
+                storage = localStorage.getItem("name");
+                storage = localStorage.getItem("email");
+            } catch (err) {
+                isStorageSupport = false;
+            }
+            
+            link.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                popap.classList.add("modal-feedback-show");
+                
+                if (storage) {
+                    surname.value = storage;
+                    email.focus();                
+                } else {
+                    surname.focus();
+                }
+                
+                if (storage) {
+                    email.value = storage;
+                    letter.focus();
+                } else {
+                    email.focus();
+                }
+            });
+            
+            close.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                popap.classList.remove("modal-feedback-show");
+                surname.classList.remove("modal-error");
+                email.classList.remove("modal-error");
+                letter.classList.remove("modal-error");
+            });
+            
+            form.addEventListener("submit", function (evt) {
+                if (!surname.value || !email.value || !letter.value) {
+                    evt.preventDefault();
+                    
+                    surname.classList.remove("modal-error");
+                    surname.offsetWidth = surname.offsetWidth;
+                    surname.classList.add("modal-error");
+                    
+                    email.classList.remove("modal-error");
+                    email.offsetWidth = email.offsetWidth;
+                    email.classList.add("modal-error");
+                    
+                    letter.classList.remove("modal-error");
+                    letter.offsetWidth = letter.offsetWidth;
+                    letter.classList.add("modal-error");
+                    
+                } else {
+                    if (isStorageSupport) {
+                    localStorage.setItem("name", surname.value);
+                    localStorage.setItem("email", email.value);
+                    }
+                }
+            });
+            window.addEventListener("keydown", function (evt) {
+                if (evt.keyCode === 27) {
+                    evt.preventDefault ();
+                    if (popap.classList.contains("modal-feedback-show")) {
+                        popap.classList.remove("modal-feedback-show");
+                        popap.classList.remove("modal-error");
+                    }
+                }
+            });
+            
+            var mapLink = document.querySelector(".contact-maps");
+            
+            var mapPopap = document.querySelector(".modal-map");
+            var mapClose = mapPopap.querySelector(".modal-close");
+            
+            mapLink.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                mapPopap.classList.add("modal-map-show"); 
+            });
+            
+            mapClose.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                mapPopap.classList.remove("modal-map-show");
+            });
+            
+            window.addEventListener("keydown", function (evt) {
+                if (evt.keyCode === 27) {
+                    evt.preventDefault ();
+                    if (mapPopap.classList.contains("modal-map-show")) { 
+                        mapPopap.classList.remove("modal-map-show");
+                    }
+                }
+            });
+            
+        </script>
+        
     </body>
 </html>
