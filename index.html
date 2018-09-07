@@ -477,19 +477,21 @@
             form.addEventListener("submit", function (evt) {
                 if (!surname.value || !email.value || !letter.value) {
                     evt.preventDefault();
-                    
+                    if (!surname.value) {
                     surname.classList.remove("modal-error");
                     surname.offsetWidth = surname.offsetWidth;
                     surname.classList.add("modal-error");
-                    
+                    }
+                    if (!email.value) {
                     email.classList.remove("modal-error");
                     email.offsetWidth = email.offsetWidth;
                     email.classList.add("modal-error");
-                    
+                    }
+                    if (!letter.value) {
                     letter.classList.remove("modal-error");
                     letter.offsetWidth = letter.offsetWidth;
                     letter.classList.add("modal-error");
-                    
+                    }
                 } else {
                     if (isStorageSupport) {
                     localStorage.setItem("name", surname.value);

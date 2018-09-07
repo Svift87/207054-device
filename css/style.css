@@ -1380,6 +1380,10 @@ img {
     border: 3px solid rgba(234, 234, 234, 0);
 }
 
+.modal-feedback-content input:invalid {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
 .modal-feedback-content input:hover,
 .modal-feedback-form textarea:hover {
     background-color: rgba(234, 234, 234, 0.8);
