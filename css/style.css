@@ -490,9 +490,9 @@ img {
     display: flex;
 }
 
-#controls-radio-1:checked ~ .slide-controls .slide-controls-radio-1::before,
-#controls-radio-2:checked ~ .slide-controls .slide-controls-radio-2::before,
-#controls-radio-3:checked ~ .slide-controls .slide-controls-radio-3::before {
+.controls-radio-button-1:checked ~ .slide-controls .slide-controls-radio-1::before,
+.controls-radio-button-2:checked ~ .slide-controls .slide-controls-radio-2::before,
+.controls-radio-button-3:checked ~ .slide-controls .slide-controls-radio-3::before {
     content: "";
     
     position: absolute;
@@ -641,6 +641,7 @@ img {
     padding: 0;
 
     list-style: none;
+    
     margin-bottom: 181px;
 }
 
@@ -802,7 +803,7 @@ img {
     z-index: 1;
 }
 
-#advantages-radio-1:checked ~ .advantages-slide-controls .advantages-slide-controls-radio-1::before {
+.advantages-button-1:checked ~ .advantages-slide-controls .advantages-slide-controls-radio-1::before {
     content: "Доставка";
     
     position: absolute;
@@ -824,7 +825,7 @@ img {
     z-index: 2;   
 }
 
-#advantages-radio-2:checked ~ .advantages-slide-controls .advantages-slide-controls-radio-2::before {
+.advantages-button-2:checked ~ .advantages-slide-controls .advantages-slide-controls-radio-2::before {
     content: "Гарантия";
     
     position: absolute;
@@ -846,7 +847,7 @@ img {
     z-index: 2;   
 }
 
-#advantages-radio-3:checked ~ .advantages-slide-controls .advantages-slide-controls-radio-3::before {
+.advantages-button-3:checked ~ .advantages-slide-controls .advantages-slide-controls-radio-3::before {
     content: "Кредит";
     
     position: absolute;
