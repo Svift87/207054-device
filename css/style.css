@@ -1703,6 +1703,10 @@ iframe {
 .sorting {
     display: flex;
     
+    position: absolute;
+    top: -139px;
+    left: -70px;
+    
     background-color: #EFEFEF;
 }
 
@@ -1800,15 +1804,6 @@ iframe {
     width: 270px;
 }
 
-.horizontal-line-catalog {
-    width: 201px;
-    height: 2px;
-    
-    background-color: #000000;
-    
-    margin-bottom: 10px;
-}
-
 .filter-item {
     font-family: "Open sans", "Arial", sans-serif;    
     font-size: 14px;
@@ -1823,7 +1818,6 @@ iframe {
 
 .range-filter {
     width: 200px;
-    margin-bottom: -5px;
 }
 
 .filter-item-name {
@@ -1834,6 +1828,19 @@ iframe {
     font-weight: 700;
     
     margin-bottom: 19px;
+}
+
+.filter-item-name::before {
+    content: "";
+    
+    display: block;
+    
+    width: 201px;
+    height: 2px;
+    
+    background-color: #000000;
+    
+    margin-bottom: 10px;
 }
 
 .range-controls {
@@ -2023,6 +2030,8 @@ iframe {
 }
 
 .catalog {
+    position: relative;
+    
     width: 760px;
     margin-top: 70px;
     margin-left: 70px;
